@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# sdaccel v2014.3.4 (64-bit)
+# SW Build 1138633 on Wed Feb 11 21:20:42 MST 2015
+# 
+# Start of session at: Sun May 24 20:03:49 2015
+# Process ID: 1570
+# Log file: /home/wml/project/wml/fwnn_sgd_fpga/sdaccel.log
+# Journal file: /home/wml/project/wml/fwnn_sgd_fpga/sdaccel.jou
+#-----------------------------------------------------------
+source fwnn_sgd_fpga.tcl -notrace

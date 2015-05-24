@@ -1,0 +1,165 @@
+#-----------------------------------------------------------
+# sdaccel v2014.3.4 (64-bit)
+# SW Build 1138633 on Wed Feb 11 21:20:42 MST 2015
+# 
+# Start of session at: Sun May 24 20:03:49 2015
+# Process ID: 1570
+# Log file: /home/wml/project/wml/fwnn_sgd_fpga/sdaccel.log
+# Journal file: /home/wml/project/wml/fwnn_sgd_fpga/sdaccel.jou
+#-----------------------------------------------------------
+source fwnn_sgd_fpga.tcl -notrace
+Attempting to get a license: ap_opencl
+Feature available: ap_opencl
+INFO: [SDAccel 60-243] Creating project...
+INFO: [SDAccel 60-233]   Project Name: 'fwnn_sgd_fpga'
+INFO: [SDAccel 60-232]   Project Dir: '.'
+INFO: [SDAccel 60-385] Setting the project platform to: 'vc690-admpcie7v3-1ddr-gen2'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/main.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/accelerator_cl.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/conv_layer.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/forward_layer.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/full_connect_layer.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/hidden_layer.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/log_reg_layer.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/maxpool_layer.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/mnistio.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/myclutils.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/neural_network.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/sgd_learn.cpp'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/accelerator_cl.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/conv_layer.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/forward_layer.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/full_connect_layer.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/hidden_layer.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/log_reg_layer.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/maxpool_layer.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/mnistio.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/myclutils.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/neural_network.h'
+INFO: [SDAccel 60-234] Added host file: '/home/wml/project/wml/fwnn_sgd_fpga/sgd_learn.h'
+INFO: [SDAccel 60-242] Creating kernel: 'hidden1_forward'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/hidden1_forward.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'hidden1_backward_dWB'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/hidden1_backward_dWB.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'hidden1_backward_delta'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/hidden1_backward_delta.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'conv1_forward'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/conv1_forward.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'conv1_backward_dWB'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/conv1_backward_dWB.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'conv1_backward_delta'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/conv1_backward_delta.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'conv2_forward'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/conv2_forward.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'conv2_backward_dWB'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/conv2_backward_dWB.cl'
+INFO: [SDAccel 60-242] Creating kernel: 'conv2_backward_delta'
+INFO: [SDAccel 60-234] Added kernel file: '/home/wml/project/wml/fwnn_sgd_fpga/kernel/conv2_backward_delta.cl'
+INFO: [SDAccel 60-240] Creating binary container: 'fwnn_acc'
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-241] Creating compute unit for binary container 'fwnn_acc' using platform 'vc690-admpcie7v3-1ddr-gen2'...
+INFO: [SDAccel 60-244] Generating system estimate report...
+INFO: [SDAccel 60-245] Generating system estimate report...COMPLETE
+===============================================================================
+Version:    sdaccel v2014.3.4 (64-bit)
+Build:      SW Build 1138633 on Wed Feb 11 21:20:42 MST 2015
+Copyright:  Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:      fwnn_sgd_fpga
+Target Platform:  vc690-admpcie7v3-1ddr-gen2
+Target Board:     
+Target Clock:     167MHz
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Kernel Summary
+
+Total number of kernels: 9
+
++-----------------------+------------+----------------------+-----------------+---------------+
+| Kernel Name           | Type       | Target               | OpenCL Library  | Compute Units |
++-----------------------+------------+----------------------+-----------------+---------------+
+| conv2_backward_delta  | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| conv2_forward         | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| hidden1_backward_dWB  | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| conv1_backward_delta  | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| conv2_backward_dWB    | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| hidden1_backward_delta| clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| hidden1_forward       | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| conv1_forward         | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
+| conv1_backward_dWB    | clc        | fpga0:OCL_REGION_0   | fwnn_acc        | 1             |
++-----------------------+------------+----------------------+-----------------+---------------+
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+OpenCL Binary = fwnn_acc
+
+Kernels mapped to = clc_region
+
+Timing Information (MHz)
++----------------------+-------------------------+-------------------------+-------------------------+
+| Compute Unit         | Kernel Name             | Target Frequency        | Estimated Frequency     |
++----------------------+-------------------------+-------------------------+-------------------------+
+| hidden1_forward      | hidden1_forward         | 166.945                 | 190.84                  |
+| hidden1_backward_dWB | hidden1_backward_dWB    | 166.945                 | 190.84                  |
+| hidden1_backward_delta| hidden1_backward_delta | 166.945                 | 190.84                  |
+| conv1_forward        | conv1_forward           | 166.945                 | 190.84                  |
+| conv1_backward_delta | conv1_backward_delta    | 166.945                 | 190.84                  |
+| conv1_backward_dWB   | conv1_backward_dWB      | 166.945                 | 190.84                  |
+| conv2_forward        | conv2_forward           | 166.945                 | 190.84                  |
+| conv2_backward_delta | conv2_backward_delta    | 166.945                 | 190.84                  |
+| conv2_backward_dWB   | conv2_backward_dWB      | 166.945                 | 190.84                  |
++----------------------+-------------------------+-------------------------+-------------------------+
+
+Latency Information (clock cycles)
++----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+| Compute Unit         | Kernel Name          | Start Interval       | Best Case            | Avg Case             | Worst Case           |
++----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+| hidden1_forward      | hidden1_forward      | undef                | undef                | undef                | undef                |
+| hidden1_backward_dWB | hidden1_backward_dWB | undef                | undef                | undef                | undef                |
+| hidden1_backward_delta| hidden1_backward_delta| undef              | undef                | undef                | undef                |
+| conv1_forward        | conv1_forward        | undef                | undef                | undef                | undef                |
+| conv1_backward_delta | conv1_backward_delta | undef                | undef                | undef                | undef                |
+| conv1_backward_dWB   | conv1_backward_dWB   | undef                | undef                | undef                | undef                |
+| conv2_forward        | conv2_forward        | undef                | undef                | undef                | undef                |
+| conv2_backward_delta | conv2_backward_delta | undef                | undef                | undef                | undef                |
+| conv2_backward_dWB   | conv2_backward_dWB   | undef                | undef                | undef                | undef                |
++----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+
+
+Area Information
++----------------------+----------------------+------------+------------+------------+------------+
+| Compute Unit         | Kernel Name          | FF         | LUT        | DSP        | BRAM       |
++----------------------+----------------------+------------+------------+------------+------------+
+| hidden1_forward      | hidden1_forward      | 4839       | 8920       | 21         | 5          |
+| hidden1_backward_dWB | hidden1_backward_dWB | 2838       | 3063       | 11         | 0          |
+| hidden1_backward_delta| hidden1_backward_delta| 2464     | 2709       | 9          | 0          |
+| conv1_forward        | conv1_forward        | 5257       | 9264       | 29         | 5          |
+| conv1_backward_delta | conv1_backward_delta | 2920       | 2990       | 21         | 0          |
+| conv1_backward_dWB   | conv1_backward_dWB   | 3188       | 3272       | 19         | 0          |
+| conv2_forward        | conv2_forward        | 5349       | 9360       | 29         | 5          |
+| conv2_backward_delta | conv2_backward_delta | 2905       | 2941       | 19         | 0          |
+| conv2_backward_dWB   | conv2_backward_dWB   | 3291       | 3201       | 19         | 0          |
++----------------------+----------------------+------------+------------+------------+------------+
+-------------------------------------------------------------------------------
+INFO: [SDAccel 60-238] Compiling host...
+INFO: [SDAccel 60-239] Compiling host...COMPLETE
+INFO: [SDAccel 60-120] Building system...
+INFO: [SDAccel 60-251]   Hardware accelerator integration...
+.................
+INFO: [SDAccel 60-251]   Hardware accelerator integration...
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+INFO: [SDAccel 60-249]   Generating OpenCL binary...
+INFO: [SDAccel 60-264] Building system...COMPLETE
+INFO: [SDAccel 60-351] Xilinx binary containers created for vc690-admpcie7v3-1ddr-gen2 can only be executed on ADM-PCIE-7V3. These binaries will not execute on any other board.
+INFO: [SDAccel 60-267] Packaging for PCIe...
+INFO: [SDAccel 60-268] Packaging for PCIe...COMPLETE
+INFO: [Common 17-206] Exiting sdaccel at Sun May 24 21:09:03 2015...
